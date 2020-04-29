@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+
+    <item
+        android:id="@+id/menuProfile"
+        android:title="@string/myprofile"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menueditProfile"
+        android:title="@string/profileSettings"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menuLogout"
+        android:title="@string/logout"
+        app:showAsAction="never" />
+
+
+</menu>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/templeDetailsBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/background_image"
+        android:scaleX="1.5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/background" />
+
+    <EditText
+        android:id="@+id/t-d-f-1"
+        android:layout_width="381dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="12dp"
+        android:paddingBottom="30dp"
+        android:ems="10"
+        android:hint="@string/tdetails1"
+        android:inputType="textPersonName"
+        android:background="@drawable/textinput_border"
+        android:requiresFadingEdge="horizontal|vertical"
+        android:textColor="@color/tdcol1"
+        android:textColorHint="@color/colorWhiteFont"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/templeDetailsBackground"
+        app:layout_constraintVertical_bias="0.139" />
+
+    <TextView
+        android:id="@+id/tdetailsDes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/tdetailsheader1"
+        android:textColor="#F8F8F8"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.064"
+        tools:text="පන්සලේ විස්තරයන් ඇතුළු කරන්න" />
+
+    <EditText
+        android:id="@+id/tdf2"
+        android:layout_width="380dp"
+        android:layout_height="98dp"
+
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/tdetails2"
+        android:inputType="textMultiLine"
+        android:paddingBottom="60dp"
+        android:textColor="@color/tdcol1"
+        android:textColorHint="@color/colorWhiteFont"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.281" />
+
+    <EditText
+        android:id="@+id/editText7"
+        android:layout_width="380dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:hint="@string/tdetails3"
+        android:paddingBottom="30dp"
+        android:inputType="textPersonName"
+        android:textColor="@color/tdcol1"
+        android:textColorHint="@color/colorWhiteFont"
+        android:textSize="12sp"
+        android:background="@drawable/textinput_border"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/templeDetailsBackground"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/templeDetailsBackground"
+        app:layout_constraintVertical_bias="0.464" />
+
+    <EditText
+        android:id="@+id/editText8"
+        android:layout_width="382dp"
+        android:layout_height="47dp"
+        android:ems="10"
+        android:hint="@string/tdetails4"
+        android:inputType="textPersonName"
+        android:paddingBottom="30dp"
+        android:textColor="@color/tdcol1"
+        android:textColorHint="@color/colorWhiteFont"
+        android:textSize="12sp"
+        android:background="@drawable/textinput_border"
+        app:layout_constraintBottom_toBottomOf="@+id/templeDetailsBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.551"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/templeDetailsBackground"
+        app:layout_constraintVertical_bias="0.593" />
+
+    <Button
+        android:id="@+id/tdetailbtn1"
+        android:layout_width="141dp"
+        android:layout_height="41dp"
+        android:background="@color/colorAccent"
+        android:text="@string/tdetailsbtn1"
+        android:textColor="@color/colorPrimaryDark"
+        android:textColorHighlight="@color/colorWhiteFont"
+        android:textColorHint="@color/tdcol1"
+        app:layout_constraintBottom_toBottomOf="@+id/templeDetailsBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.944"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.753" />
+
+    <Button
+        android:id="@+id/tdetailsbtn2"
+        android:layout_width="296dp"
+        android:layout_height="45dp"
+        android:focusable="auto"
+        android:text="@string/tdetailsbutton1"
+        android:textColor="@color/tdcol1"
+        android:background="@drawable/button_file"
+        android:textColorHint="@color/tdcol1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintCircleRadius="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.922" />
+
+    <TextView
+        android:id="@+id/tfd5"
+        android:layout_width="171dp"
+        android:layout_height="31dp"
+        android:text="@string/tdetails7"
+        android:textColor="@color/tdcol1"
+        app:layout_constraintBottom_toBottomOf="@+id/templeDetailsBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.066"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.757" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:padding="10dp"
+    tools:context=".CHEventDetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <!--Table for other data-->
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:stretchColumns="2">
+
+            <TableRow
+                android:background="#faffa3"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/eventBio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_span="3"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:text="පිංකම් කළමනාකරණය"
+                    android:textAlignment="center"
+                    android:textColor="@color/textBlack" />
+            </TableRow>
+
+            <TableRow
+                android:background="#ffd4a3"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#9E938D"
+                    android:padding="5dp"
+                    android:text="පිංකම"
+                    android:textColor="@color/textBlack"
+                    android:textSize="14dp" />
+
+
+                <TextView
+                    android:id="@+id/eventNameTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:text="පිංකම ලියන්න.."
+                    android:textColor="@color/textBlack"
+                    android:textColorLink="@color/colorPrimaryDark"
+                    android:textSize="13dp" />
+            </TableRow>
+
+            <TableRow
+                android:background="#fce8bb"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="පිංකම් විස්තරය"
+                    android:textColor="@color/textBlack"
+                    android:textSize="14dp" />
+
+
+                <TextView
+                    android:id="@+id/eventDesTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:text="පිංකම් විස්තරය ලියන්න.."
+                    android:textColor="@color/textBlack"
+                    android:textSize="13dp" />
+            </TableRow>
+
+            <TableRow
+                android:background="#ffd4a3"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="පිංකම් දිනය"
+                    android:textColor="@color/textBlack"
+                    android:textSize="14dp" />
+
+
+                <TextView
+                    android:id="@+id/eventDateTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:text="පිංකම් දිනය ලියන්න.."
+                    android:textColor="@color/textBlack"
+                    android:textSize="13dp" />
+            </TableRow>
+
+            <TableRow
+                android:background="#fce8bb"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="පිංකම් වේලාව"
+                    android:textColor="@color/textBlack"
+                    android:textSize="14dp" />
+
+
+                <TextView
+                    android:id="@+id/eventTimeTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:text="පිංකම් වේලාව ලියන්න.."
+                    android:textColor="@color/textBlack"
+                    android:textSize="13dp" />
+            </TableRow>
+
+            <TableRow
+                android:background="#ffd4a3"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="සාදන ලද්දේ"
+                    android:textColor="@color/textBlack"
+                    android:textSize="14dp" />
+
+
+                <TextView
+                    android:id="@+id/addedTimeTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:text="සාදන්න..(Date-Time)"
+                    android:textColor="@color/textBlack"
+                    android:textSize="13dp" />
+            </TableRow>
+
+            <TableRow
+                android:background="#fce8bb"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="යාවත් කාලින කරන ලද්දේ"
+                    android:textColor="@color/textBlack"
+                    android:textSize="14dp" />
+
+
+                <TextView
+                    android:id="@+id/updatedTimeTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:text="යාවත් කාලින කරන්න..(Date-Time)"
+                    android:textColor="@color/textBlack"
+                    android:textSize="13dp" />
+            </TableRow>
+
+        </TableLayout>
+
+
+    </LinearLayout>
+</ScrollView>

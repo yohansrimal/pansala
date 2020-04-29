@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#c96236</color>
+    <color name="colorPrimaryDark">#351020</color>
+    <color name="colorAccent">#d77c40</color>
+    <color name="colorBorder">#9C9C9C</color>
+    <color name="colorWhiteFont">#FFFFFF</color>
+    <color name="regBtnColor">#393939</color>
+    <color name="colortHint">#878787</color>
+    <color name="colorError">#E4E4E4</color>
+    <color name="cardButtonPressed">#39FFFFFF</color>
+
+    <color name="buttonPressed">#666666</color>
+    <color name="buttonNotPressed">#47162B</color>
+
+    <color name="colorWhite">#ffffff</color>
+    <color name="textBlack">#000000</color>
+
+    <color name="tdcol1">#FF5722</color>
+
+</resources>

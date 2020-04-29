@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="1dp"
+    app:cardUseCompatPadding="true"
+    app:contentPadding="5dp"
+    app:cardBackgroundColor="@color/colorWhite"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.blogspot.atifsoftwares.circularimageview.CircularImageView
+            android:id="@+id/profileIv"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/templenew"
+            app:c_border="true"
+            app:c_border_color="@android:color/holo_orange_dark"
+            app:c_border_width="2dp" />
+        <LinearLayout
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toStartOf="@+id/moreBtn"
+            android:layout_toEndOf="@+id/profileIv"
+            android:layout_toLeftOf="@+id/moreBtn"
+            android:layout_toRightOf="@+id/profileIv">
+
+            <!--Temple Name-->
+
+            <TextView
+                android:id="@+id/nameTv"
+                android:layout_width="276dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="42dp"
+                android:text="පන්සලේ නම"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/locationTv"
+                android:layout_width="276dp"
+                android:layout_marginStart="10dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="42dp"
+                android:text="පිහිටීම"
+                android:textColor="@color/colorPrimaryDark" />
+
+            <TextView
+                android:id="@+id/phoneTv"
+                android:layout_width="276dp"
+                android:layout_marginStart="10dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="42dp"
+                android:text="දුරකථන අංකය"
+                android:textColor="@color/colorPrimaryDark"
+                 />
+
+        </LinearLayout>
+
+        <!--To show options like delete, edit etc-->
+
+        <ImageButton
+            android:id="@+id/moreBtn"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/dropdown"
+            android:layout_alignParentEnd="true"
+            android:background="@null"
+            android:layout_alignParentRight="true"/>
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

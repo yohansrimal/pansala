@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/templeContributionBackground"
+        android:layout_width="419dp"
+        android:layout_height="731dp"
+        android:contentDescription="@string/background_image"
+        android:scaleX="1.5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/background" />
+
+    <TextView
+        android:id="@+id/tc1"
+        android:layout_width="190dp"
+        android:layout_height="47dp"
+        android:gravity="center"
+        android:text="@string/tempcontrides1"
+        android:textColor="@color/colorWhiteFont"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.553"
+        app:layout_constraintStart_toStartOf="@+id/templeContributionBackground"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.052" />
+
+    <EditText
+        android:id="@+id/tc3"
+        android:layout_width="364dp"
+        android:layout_height="53dp"
+        android:background="@drawable/textinput_border"
+        android:ems="10"
+        android:hint="@string/tcontribution2"
+        android:inputType="textPersonName"
+        android:paddingBottom="30dp"
+        android:textColor="@color/tdcol1"
+        android:textColorHint="@color/colorBorder"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/templeContributionBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.134" />
+
+    <EditText
+        android:id="@+id/tc4"
+        android:layout_width="364dp"
+        android:layout_height="47dp"
+        android:background="@drawable/textinput_border"
+        android:ems="10"
+        android:hint="@string/tCountri3"
+        android:inputType="textPersonName"
+        android:paddingBottom="30dp"
+        android:textColor="@color/tdcol1"
+        android:textColorHint="@color/colorBorder"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.23" />
+
+    <Button
+        android:id="@+id/cbtn1"
+        android:layout_width="306dp"
+        android:layout_height="63dp"
+        android:background="@drawable/button_file"
+        android:text="@string/tcontri7"
+        android:textColor="@color/tdcol1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.387" />
+
+    <Button
+        android:id="@+id/cbtn2"
+        android:layout_width="305dp"
+        android:layout_height="64dp"
+        android:background="@color/buttonPressed"
+        android:text="@string/tcontri10"
+        android:textColor="@color/colorWhiteFont"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/templeContributionBackground"
+        app:layout_constraintVertical_bias="0.682" />
+
+    <Button
+        android:id="@+id/cbtn10"
+        android:layout_width="305dp"
+        android:layout_height="62dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/tdcol1"
+        android:text="@string/tcontri11"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/templeContributionBackground"
+        app:layout_constraintVertical_bias="0.862" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

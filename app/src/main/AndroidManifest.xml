@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.pansala">
+    <!-- Camera Storage Permission for image pic -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".NRecordDetailActivity"/>
+        <activity android:name=".NAddUpdateRecordActivity" />
+        <activity android:name=".NTempleHome">
+        </activity>
+
+        <!--Temple event Management-->
+        <activity android:name=".CHEventDetailActivity"/>
+        <activity android:name=".CHAddUpdateEventActivity" />
+        <activity android:name=".ChEventHadingHome"/>
+
+        <!--Dhamma Shool Management-->
+        <activity android:name=".td_dahampasala_Form"></activity>
+        <activity android:name=".td_dahampasala_enter"></activity>
+
+
+        <activity android:name=".viewProfile"></activity>
+        <activity android:name=".EditProfile" />
+        <activity android:name=".userDashboard" />
+        <activity
+            android:name=".Register"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AdminList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TempleList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UserList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MonkList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".adminDashboard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Login"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Image cropper activity for temple management profile -->
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/AppTheme" />
+    </application>
+
+</manifest>
