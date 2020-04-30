@@ -34,7 +34,7 @@ public class userDashboard extends AppCompatActivity {
 
         name = (TextView) findViewById(R.id.dashboardName);
 
-        name.setText(session.getSessionFn().toString());
+        name.setText("ආයුබෝවන් "+ session.getSessionFn().toString());
     }
 
     @Override
