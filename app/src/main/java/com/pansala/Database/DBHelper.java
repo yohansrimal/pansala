@@ -621,14 +621,13 @@ public class DBHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = getWritableDatabase();
         db.delete(NConstants.TABLE_NAME,NConstants.C_ID+" = ?",new String[]{id});
         db.close();
-
     }
+
     //delete all data from table
     public void deleteAllTempleData(){
         SQLiteDatabase db = getWritableDatabase();
         db.execSQL("DELETE FROM " + NConstants.TABLE_NAME);
         db.close();
-
     }
 
 
@@ -642,5 +641,117 @@ public class DBHelper extends SQLiteOpenHelper {
         cursor.close();
         return count;
     }
+
+
+    //Handling user private temples and events
+
+    public long addTemple(String templeId, String UserId){
+        String Table_Name = "UserID" + UserId;
+        String C_TID  = "tempId";
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(C_TID, templeId);
+
+        long result = db.insert(Table_Name, null, values);
+        return result;
+    }
+
+
+    //get all user temple list data
+    public ArrayList<NModelRecord> getUsersTempleRecords(String userId){
+        //order by query allow to sort data e.g. newest/oldest first, name asc/desc
+        //it will return list or records since we have used return type ArrayList<NModelRecord>
+
+        ArrayList<NModelRecord> recordsList = new ArrayList<>();
+        //query to select records
+        String selectQuery = "SELECT * FROM " + NConstants.TABLE_NAME + " t, " + "UserID" + userId + " u" +
+                " WHERE " + "t.ID = u.tempId";
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+
+        //looping through all the records and add to list
+        if (cursor.moveToFirst()){
+            do{
+                NModelRecord nmodelRecord = new NModelRecord(
+                        ""+cursor.getInt(cursor.getColumnIndex(NConstants.C_ID)),
+                        ""+cursor.getString(cursor.getColumnIndex(NConstants.C_NAME)),
+                        ""+cursor.getString(cursor.getColumnIndex(NConstants.C_IMAGE)),
+                        ""+cursor.getString(cursor.getColumnIndex(NConstants.C_HISTORY)),
+                        ""+cursor.getString(cursor.getColumnIndex(NConstants.C_START)),
+                        ""+cursor.getString(cursor.getColumnIndex(NConstants.C_MONK)),
+                        ""+cursor.getString(cursor.getColumnIndex(NConstants.C_LOCATION)),
+                        ""+cursor.getString(cursor.getColumnIndex(NConstants.C_PHONE)),
+                        ""+cursor.getString(cursor.getColumnIndex(NConstants.C_ADDED_TIMESTAMP)),
+                        ""+cursor.getString(cursor.getColumnIndex(NConstants.C_UPDATED_TIMESTAMP)));
+                //add record to list
+                recordsList.add(nmodelRecord);
+            }while (cursor.moveToNext());
+        }
+
+        //close db connection
+        db.close();
+
+        //return the list
+        return recordsList;
+    }
+
+    //search user temple data
+    public ArrayList<NModelRecord> searchUserTempleRecords(String query, String userId){
+        //order by query allow to sort data e.g. newest/oldest first, name asc/desc
+        //it will return list or records since we have used return type ArrayList<NModelRecord>
+
+        ArrayList<NModelRecord> recordsList = new ArrayList<>();
+        //query to select records
+        String selectQuery = "SELECT * FROM " + NConstants.TABLE_NAME + " t, " + "UserID" + userId + " u" +
+                " WHERE " + "t.ID = u.tempId" +
+         " AND " + NConstants.C_NAME + " LIKE '%" + query +"%'";
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+
+        //looping through all the records and add to list
+        if (cursor.moveToFirst()){
+            do{
+                NModelRecord nmodelRecord = new NModelRecord(
+                        ""+cursor.getInt(cursor.getColumnIndex(NConstants.C_ID)),
+                        ""+cursor.getString(cursor.getColumnIndex(NConstants.C_NAME)),
+                        ""+cursor.getString(cursor.getColumnIndex(NConstants.C_IMAGE)),
+                        ""+cursor.getString(cursor.getColumnIndex(NConstants.C_HISTORY)),
+                        ""+cursor.getString(cursor.getColumnIndex(NConstants.C_START)),
+                        ""+cursor.getString(cursor.getColumnIndex(NConstants.C_MONK)),
+                        ""+cursor.getString(cursor.getColumnIndex(NConstants.C_LOCATION)),
+                        ""+cursor.getString(cursor.getColumnIndex(NConstants.C_PHONE)),
+                        ""+cursor.getString(cursor.getColumnIndex(NConstants.C_ADDED_TIMESTAMP)),
+                        ""+cursor.getString(cursor.getColumnIndex(NConstants.C_UPDATED_TIMESTAMP)));
+                //add record to list
+                recordsList.add(nmodelRecord);
+            }while (cursor.moveToNext());
+        }
+
+        //close db connection
+        db.close();
+
+        //return the list
+        return recordsList;
+    }
+
+    //delete user's temple data
+    public boolean removeTempleData(String id, String userId){
+        SQLiteDatabase db = getWritableDatabase();
+        String Table_Name = "UserID"+ userId;
+        String ID_COL = "tempId";
+        String selection = ID_COL + " LIKE ?";
+
+        String[] selectionArgs = {String.valueOf(id)};
+        int count = db.delete(Table_Name, selection, selectionArgs);
+
+        if (count == 1) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 
 }

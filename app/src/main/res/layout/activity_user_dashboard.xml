@@ -45,6 +45,7 @@
             <TableRow android:layout_width="0dp">
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/myTemples"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_columnWeight="1"
@@ -83,6 +84,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/myEvents"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_columnWeight="1"
@@ -129,6 +131,7 @@
             <TableRow android:layout_width="0dp">
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/searchEvents"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:clickable="true"
@@ -167,6 +170,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/SearchTemples"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:clickable="true"

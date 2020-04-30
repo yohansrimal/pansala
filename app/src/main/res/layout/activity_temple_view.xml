@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".TempleView"
+    android:background="@drawable/background">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--Temple profile image-->
+
+        <com.blogspot.atifsoftwares.circularimageview.CircularImageView
+            android:id="@+id/profileIv"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:c_border="true"
+            app:c_border_color="@color/colorPrimaryDark"
+            android:layout_marginBottom="10dp"
+            app:c_border_width="1dp"
+            android:src="@drawable/templenew"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"/>
+
+        <!--Table for other data-->
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:stretchColumns="2">
+
+            <TableRow android:background="#faffa3" android:padding="5dp">
+                <TextView
+                    android:id="@+id/templeBio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_span="3"
+                    android:layout_marginTop="5dp"
+                    android:padding="5dp"
+                    android:textAlignment="center"
+                    android:layout_weight="1"
+                    android:text="පන්සල් විස්තරය"
+                    android:textColor="@color/textBlack"/>
+            </TableRow>
+            <TableRow   android:background="#ffd4a3" android:padding="5dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="පන්සලේ නම"
+                    android:textSize="14dp"
+                    android:textColor="@color/textBlack"/>
+
+
+                <TextView android:id="@+id/nameTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:text="පන්සලේ නම මෙතනින්.."
+                    android:textSize="13dp"
+                    android:textColor="@color/textBlack"/>
+            </TableRow>
+            <TableRow android:background="#fce8bb" android:padding="5dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:textSize="14dp"
+                    android:text="ඉතිහාසය"
+                    android:textColor="@color/textBlack"/>
+
+
+                <TextView android:id="@+id/historyTempleTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:textSize="13dp"
+                    android:text="පන්සලේ ඉතිහාසය මෙතනින්.."
+                    android:textColor="@color/textBlack"/>
+            </TableRow>
+            <TableRow android:background="#ffd4a3" android:padding="5dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14dp"
+                    android:padding="10dp"
+                    android:text="ආරම්භය"
+                    android:textColor="@color/textBlack"/>
+
+
+                <TextView android:id="@+id/startTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:textSize="13dp"
+                    android:text="පන්සලේ ආරම්භය මෙතනින්"
+                    android:textColor="@color/textBlack"/>
+            </TableRow>
+            <TableRow android:background="#fce8bb" android:padding="5dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14dp"
+                    android:padding="10dp"
+                    android:text="නායක ස්වාමින් වහන්සේ"
+                    android:textColor="@color/textBlack"/>
+
+
+                <TextView android:id="@+id/monkNameTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:textSize="13dp"
+                    android:text="විහාරාධිපති මෙතනින්.."
+                    android:textColor="@color/textBlack"/>
+            </TableRow>
+            <TableRow android:background="#ffd4a3" android:padding="5dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:textSize="14dp"
+                    android:text="ස්ථානය"
+                    android:textColor="@color/textBlack"/>
+
+
+                <TextView android:id="@+id/locationTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:textSize="13dp"
+                    android:text="පිහිටීම මෙතනින්.."
+                    android:textColor="@color/textBlack"/>
+            </TableRow>
+            <TableRow android:background="#fce8bb" android:padding="5dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:textSize="14dp"
+                    android:text="දුරකථන අංකය"
+                    android:textColor="@color/textBlack"/>
+
+
+                <TextView android:id="@+id/monkTeleTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:textSize="13dp"
+                    android:text="දුරකන අංකය මෙතනින්.."
+                    android:textColor="@color/textBlack"/>
+            </TableRow>
+            <TableRow android:background="#ffd4a3" android:padding="5dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14dp"
+                    android:padding="10dp"
+                    android:text="සාදන ලද්දේ"
+                    android:textColor="@color/textBlack"/>
+
+
+                <TextView android:id="@+id/addedTimeTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:textSize="13dp"
+                    android:text="සාදන්න..(Date-Time)"
+                    android:textColor="@color/textBlack"/>
+            </TableRow>
+            <TableRow android:background="#fce8bb" android:padding="5dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14dp"
+                    android:padding="10dp"
+                    android:text="යාවත් කාලින කරන ලද්දේ"
+                    android:textColor="@color/textBlack"/>
+
+
+                <TextView android:id="@+id/updatedTimeTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:textSize="13dp"
+                    android:text="යාවත් කාලින කරන්න..(Date-Time)"
+                    android:textColor="@color/textBlack"/>
+            </TableRow>
+
+            <Button
+                android:id="@+id/removeTempleButton"
+                android:layout_width="149dp"
+                android:layout_height="40dp"
+                android:background="@drawable/button_file"
+                android:text="@string/removeTemple"
+                android:textColor="@color/colorWhiteFont" />
+
+        </TableLayout>
+
+
+    </LinearLayout>
+</ScrollView>

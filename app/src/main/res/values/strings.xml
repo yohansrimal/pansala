@@ -105,7 +105,6 @@
     <string name="txtmonkcon">පන්සලේ දුරකථන අංකය</string>
 
 
-
     <string name="MsgDahampasal">දහම්පාසලෙහි විස්තර ඇතුලත් කරන්න</string>
     <string name="btnDahampasal">ඇතුල්වන්න</string>
     <string name="msgDahampasalaForm">දහම්පාසල පිලිබඳ විස්තර</string>
@@ -154,5 +153,7 @@
     <string name="eventSettings">පිංකම් සැකසුම්</string>
     <string name="dhammaSchoolSettings">දහම්පාසල් සැකසුම්</string>
     <string name="userSettings">පරිශීලක සැකසුම්</string>
+    <string name="addbutton">එකතු කරන්න</string>
+    <string name="removeTemple">මගේ විහාරස්ථාන වලින් ඉවත් කරන්න</string>
 
 </resources>

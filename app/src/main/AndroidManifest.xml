@@ -13,22 +13,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".NRecordDetailActivity"/>
+        <activity android:name=".TempleView"></activity>
+        <activity android:name=".userTempleList" />
+        <activity android:name=".TempleDetail" />
+        <activity android:name=".UserTempleHandle" />
+        <activity android:name=".NRecordDetailActivity" />
         <activity android:name=".NAddUpdateRecordActivity" />
-        <activity android:name=".NTempleHome">
-        </activity>
-
-        <!--Temple event Management-->
-        <activity android:name=".CHEventDetailActivity"/>
+        <activity android:name=".NTempleHome" /> <!-- Temple event Management -->
+        <activity android:name=".CHEventDetailActivity" />
         <activity android:name=".CHAddUpdateEventActivity" />
-        <activity android:name=".ChEventHadingHome"/>
-
-        <!--Dhamma Shool Management-->
-        <activity android:name=".td_dahampasala_Form"></activity>
-        <activity android:name=".td_dahampasala_enter"></activity>
-
-
-        <activity android:name=".viewProfile"></activity>
+        <activity android:name=".ChEventHadingHome" /> <!-- Dhamma Shool Management -->
+        <activity android:name=".td_dahampasala_Form" />
+        <activity android:name=".td_dahampasala_enter" />
+        <activity android:name=".viewProfile" />
         <activity android:name=".EditProfile" />
         <activity android:name=".userDashboard" />
         <activity
@@ -60,9 +57,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!-- Image cropper activity for temple management profile -->
+        </activity> <!-- Image cropper activity for temple management profile -->
         <activity
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
             android:theme="@style/AppTheme" />

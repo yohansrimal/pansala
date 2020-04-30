@@ -3,12 +3,14 @@ package com.pansala;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -18,6 +20,7 @@ public class userDashboard extends AppCompatActivity {
 
     private TextView name;
     private Session session;
+    private CardView templeSearch, myTemples;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +28,9 @@ public class userDashboard extends AppCompatActivity {
         setContentView(R.layout.activity_user_dashboard);
 
         session = new Session(this);
+
+        templeSearch = (CardView) findViewById(R.id.SearchTemples);
+        myTemples = (CardView) findViewById(R.id.myTemples);
 
         name = (TextView) findViewById(R.id.dashboardName);
 
@@ -59,5 +65,26 @@ public class userDashboard extends AppCompatActivity {
             startActivity(intent);
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        templeSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(userDashboard.this, UserTempleHandle.class);
+                startActivity(intent);
+            }
+        });
+
+        myTemples.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(userDashboard.this, userTempleList.class);
+                startActivity(intent);
+            }
+        });
     }
 }
